@@ -12,15 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('arrive', function (Blueprint $table) {
-            $table->id('Numero_Arrive');
-            $table->date('Date_Arrive');
+            $table->id('NumeroArrive');
+            $table->date('DateArrive');
             $table->string('Provenance');
-            $table->integer('Numero_Correspondance_Arrive');
-            $table->date('Date_Correspondance_Arrive');
-            $table->string('Texte_Corespondance_Arrive');
-            $table->integer('Nombre_Pieces_Jointes_Arrive');
-            $table->string('Observations');
-            $table->string('Etat_arrive')->default('En attente');
+            $table->integer('numero_Correspondance_arrive');
+            $table->date('DateCorrespondanceArrive');
+            $table->string('TexteCorespondanceArrive');
+            $table->integer('piece_jointe_arrive');
+            $table->string('observations');
+            $table->string('etat')->default('En attente');
+            $table->string('Destinataire');
             $table->timestamps();
         });
     }

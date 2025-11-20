@@ -12,13 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('depart', function (Blueprint $table) {
-            $table->id('Numero_Depart');
-            $table->integer('Numero_Correspondance_Depart');
-            $table->date('Date_Depart');
-            $table->string('Objet_Depart');
-            $table->string('Destinataire');
-            $table->integer('Nombre_Pieces_Jointes_Depart');
-            $table->string('Etat_depart')->default('Non Validé');
+            $table->id('NumeroDepart');
+            $table->integer('numero_correspondance_depart');
+            $table->date('DateDepart');
+            $table->string('ObjetDepart');
+            $table->string('DestinataireDepart');
+            $table->integer('nombre_pieces_jointes');
+            $table->string('etat_depart')->default('Non Validé');
+            $table->string('ObservationsDepart');
             $table->timestamps();
         });
     }
